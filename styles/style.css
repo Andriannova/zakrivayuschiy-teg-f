@@ -17,7 +17,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font, sans-serif);
-  font-variation-settings: var(--main-font-weight);
+  font-variation-settings: "wght" var(--main-font-weight);
   background-color: var(--bg-color, #fff);
   color: var(--text-color, #000);
   background-attachment: fixed; 
@@ -39,7 +39,7 @@
   margin-inline: auto;
   border: 2px solid var(--text-color);
   background: var(--bg-color);
-  max-inline-size: 696px;
+  max-inline-size: 700px;
   margin-block-start: 50px;
 }
 
@@ -120,14 +120,14 @@
 
 .card__title {
   font-size: 18px;
-  padding: 3px 10px;
+  padding: 4px 10px;
   border-block-end: 2px solid var(--text-color);
   font-variation-settings: "wght" var(--header-font-weight);
 }
 
 .card__image-block {
   position: relative;
-  max-block-size: 696px;
+  max-block-size: 700px;
   margin: 0;
 }
 
@@ -138,7 +138,6 @@
   font-family: var(--header-font);
   color: var(--text-color);
   font-size: 14px;
-  text-transform: uppercase;
   text-shadow: 0 0 4px var(--bg-color);
   inset-inline-end: 25px;
   inset-block-start: 25px;
@@ -252,7 +251,7 @@ or (text-stroke: 1px var(--text-stroke-color))) {
   display: flex;
   justify-content: center;
   align-items: center;
-  line-height: 12.6px;
+  line-height: 0.9;
   overflow: hidden;
 }
 
@@ -317,8 +316,7 @@ or (text-stroke: 1px var(--text-stroke-color))) {
   line-height: 1.5;
   text-transform: uppercase;
   background: var(--bg-color);
-  max-inline-size: 355px;
-  gap: 30px;
+  max-inline-size: 357px;
 }
 
 .dialog::backdrop {
@@ -343,17 +341,16 @@ or (text-stroke: 1px var(--text-stroke-color))) {
 
 .dialog__header {
   text-transform: uppercase;
-  padding-top: 12px;
   font-family: var(--header-font);
   font-size: 14px;
 }
 
 .dialog__close {
   inline-size: 100%;
-  min-width: 100%;
+  min-inline-size: 100%;
   text-transform: uppercase;
-  padding-top: 12.5px;
-  padding-bottom: 12.5px;
+  padding-block-start: 12.5px;
+  padding-block-end: 12.5px;
 }
 
 @media (width <= 375px) {
@@ -386,9 +383,9 @@ or (text-stroke: 1px var(--text-stroke-color))) {
     margin-block-start: 118px;
   }
 
-  .dialog {
-    padding: 30px 40px;
-    max-inline-size: 340px;
+  .dialog[open] {
+    padding: 30px 41px;
+    max-inline-size: 341px;
   }
 
   .button__save {
